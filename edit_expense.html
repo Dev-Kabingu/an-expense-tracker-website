@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Expense - Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Edit Expense</h1>
+        <nav>
+            <ul>
+                <li><a href="view_expenses.html">View Expenses</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="form-container">
+        <h2>Update Expense Details</h2>
+        <form action="update_expense.php" method="POST">
+            <input type="hidden" name="expense_id" value="123"> <!-- Example expense ID -->
+
+            <label for="amount">Amount</label>
+            <input type="number" id="amount" name="amount" value="50.00" required>
+
+            <label for="category">Category</label>
+            <input type="text" id="category" name="category" value="Food" required>
+
+            <label for="payment_method">Payment Method</label>
+            <input type="text" id="payment_method" name="payment_method" value="Cash" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" required>Lunch at restaurant</textarea>
+
+            <button type="submit">Update Expense</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Expense Tracker. All rights reserved.</p>
+    </footer>
+</body>
+</html>
